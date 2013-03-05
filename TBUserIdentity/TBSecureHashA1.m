@@ -1,9 +1,9 @@
 //
-//  main.m
+//  TBSecureHashA1.m
 //  TBUserIdentity
 //
-//  Created by Markos Charatzas on 02/03/2013.
-//  Copyright (c) 2013 Markos Charatzas (@qnoid). 
+//  Created by Markos Charatzas on 21/11/2012.
+//  Copyright (c) 2012 Markos Charatzas (@qnoid). 
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of
 //  this software and associated documentation files (the "Software"), to deal in
@@ -24,13 +24,39 @@
 //  SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
+#import "TBSecureHashA1.h"
+#import "NSString+TBString.h"
+#include <CommonCrypto/CommonDigest.h>
 
-#import "TBAppDelegate.h"
+@interface TBSecureHashA1 ()
+-(NSString*)uuid;
+@end
 
-int main(int argc, char *argv[])
+@implementation TBSecureHashA1
+
+-(NSString*)uuid
 {
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TBAppDelegate class]));
-    }
+    CFUUIDRef uuid = CFUUIDCreate(kCFAllocatorDefault);
+    NSString *uuidStr = (__bridge_transfer NSString *)CFUUIDCreateString(kCFAllocatorDefault, uuid);
+    CFRelease(uuid);
+    
+return uuidStr;
 }
+
+-(NSString*)newKey {
+return [self newKey:[self uuid]];
+}
+
+-(NSString*)newKey:(NSString*)digest
+{
+    uint8_t sha1hash[CC_SHA1_DIGEST_LENGTH];
+    NSData* uuid = [digest dataUsingEncoding:NSUTF8StringEncoding];
+    
+    if (!CC_SHA1(uuid.bytes, uuid.length, sha1hash) ) {
+        return nil;
+    }
+    
+return [NSString stringHexFromData:sha1hash size:CC_SHA1_DIGEST_LENGTH];
+}
+
+@end

@@ -1,8 +1,8 @@
 //
-//  main.m
+//  TBVerifyOperationBlock.m
 //  TBUserIdentity
 //
-//  Created by Markos Charatzas on 02/03/2013.
+//  Created by Markos Charatzas on 10/02/2013.
 //  Copyright (c) 2013 Markos Charatzas (@qnoid). 
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -24,13 +24,29 @@
 //  SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
+#import "TBVerifyOperationBlock.h"
 
-#import "TBAppDelegate.h"
+@implementation TBVerifyOperationBlock
 
-int main(int argc, char *argv[])
+- (id)init
 {
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TBAppDelegate class]));
+    self = [super init];
+    if (!self) {
+        return nil;
     }
+    
+    self.didSucceedWithVerificationForEmail = tbEmptyDidSucceedWithVerificationForEmail();
+    self.didFailOnVerifyWithError = tbEmptyDidFailOnVerifyWithError();
+    
+return self;
 }
+
+-(void)didSucceedWithVerificationForEmail:(NSString *)email residence:(NSDictionary *)residence {
+    self.didSucceedWithVerificationForEmail(email, residence);
+}
+
+-(void)didFailOnVerifyWithError:(NSError *)error {
+    self.didFailOnVerifyWithError(error);
+}
+
+@end

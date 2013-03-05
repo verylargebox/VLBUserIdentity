@@ -1,9 +1,11 @@
 //
-//  main.m
-//  TBUserIdentity
+//  Copyright 2012 TheBox 
+//  
 //
-//  Created by Markos Charatzas on 02/03/2013.
-//  Copyright (c) 2013 Markos Charatzas (@qnoid). 
+//  This file is part of TheBox
+//
+//  Created by Markos Charatzas (@qnoid)  on 18/04/2012.
+//  Contributor(s): .-
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of
 //  this software and associated documentation files (the "Software"), to deal in
@@ -24,13 +26,17 @@
 //  SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
+#import "NSMutableDictionary+TBMutableDictionary.h"
 
-#import "TBAppDelegate.h"
+@implementation NSMutableDictionary (TBMutableDictionary)
 
-int main(int argc, char *argv[])
+-(void)tbSetObjectIfNotNil:(id)object forKey:(id)key
 {
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TBAppDelegate class]));
+    if(object == nil){
+        return;
     }
+    
+    [self setObject:object forKey:key];
 }
+
+@end

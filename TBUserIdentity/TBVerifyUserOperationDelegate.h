@@ -1,9 +1,9 @@
 //
-//  main.m
+//  TBVerifyUserOperationDelegate.h
 //  TBUserIdentity
 //
-//  Created by Markos Charatzas on 02/03/2013.
-//  Copyright (c) 2013 Markos Charatzas (@qnoid). 
+//  Created by Markos Charatzas on 22/11/2012.
+//  Copyright (c) 2012 Markos Charatzas (@qnoid). 
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of
 //  this software and associated documentation files (the "Software"), to deal in
@@ -24,13 +24,18 @@
 //  SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-#import "TBAppDelegate.h"
+@protocol TBVerifyUserOperationDelegate <NSObject>
 
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TBAppDelegate class]));
-    }
-}
+/**
+ Callback TBQueries#newVerifyUserQuery:email:residence succesfully verifies the user for the given email under
+ the given residence.
+ 
+ @param email the email passed in TBQueries#newVerifyUserQuery:email:residence
+ @param residence the residence mapping to the JSON as returned by the server.
+*/
+-(void)didSucceedWithVerificationForEmail:(NSString*)email residence:(NSDictionary*)residence;
+-(void)didFailOnVerifyWithError:(NSError*)error;
+
+@end

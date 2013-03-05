@@ -1,5 +1,5 @@
 //
-//  main.m
+//  TBVerifiedViewController.h
 //  TBUserIdentity
 //
 //  Created by Markos Charatzas on 02/03/2013.
@@ -26,11 +26,8 @@
 
 #import <UIKit/UIKit.h>
 
-#import "TBAppDelegate.h"
+@interface TBVerifiedViewController : UITableViewController
 
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TBAppDelegate class]));
-    }
-}
++(instancetype)newVerifiedViewController:(NSDictionary*)residence email:(NSString*)email;
+
+@end

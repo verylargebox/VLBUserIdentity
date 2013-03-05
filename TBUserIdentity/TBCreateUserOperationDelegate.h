@@ -1,9 +1,9 @@
 //
-//  main.m
+//  TBRegisterOperationDelegate.h
 //  TBUserIdentity
 //
-//  Created by Markos Charatzas on 02/03/2013.
-//  Copyright (c) 2013 Markos Charatzas (@qnoid). 
+//  Created by Markos Charatzas on 19/11/2012.
+//  Copyright (c) 2012 Markos Charatzas (@qnoid). 
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of
 //  this software and associated documentation files (the "Software"), to deal in
@@ -24,13 +24,24 @@
 //  SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "TBNSErrorDelegate.h"
 
-#import "TBAppDelegate.h"
+@protocol TBCreateUserOperationDelegate <NSObject, TBNSErrorDelegate>
 
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TBAppDelegate class]));
-    }
-}
+/**
+ Callback by TheBoxQueries#newCreateUserQuery:email: when succesfuly created a user.
+ 
+ @param email the email as entered by the user
+ @param residence a residence id created for the user
+*/
+-(void)didSucceedWithRegistrationForEmail:(NSString*)email residence:(NSString*)residence;
+
+/**
+ Callback by TheBoxQueries#newCreateUserQuery:email: when failed to create a user.
+ 
+ @param error the error
+*/
+-(void)didFailOnRegistrationWithError:(NSError*)error;
+
+@end

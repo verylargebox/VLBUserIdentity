@@ -1,9 +1,9 @@
 //
-//  main.m
+//  NSString+TBString.m
 //  TBUserIdentity
 //
-//  Created by Markos Charatzas on 02/03/2013.
-//  Copyright (c) 2013 Markos Charatzas (@qnoid). 
+//  Created by Markos Charatzas on 21/11/2012.
+//  Copyright (c) 2012 Markos Charatzas (@qnoid). 
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of
 //  this software and associated documentation files (the "Software"), to deal in
@@ -24,13 +24,18 @@
 //  SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
+#import "NSString+TBString.h"
 
-#import "TBAppDelegate.h"
+@implementation NSString (TBString)
 
-int main(int argc, char *argv[])
++(NSString*)stringHexFromData:(uint8_t[])data size:(NSUInteger)length;
 {
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TBAppDelegate class]));
+    NSMutableString* hex = [NSMutableString stringWithCapacity:length * 2];
+    
+    for(int i = 0; i < length; i++){
+        [hex appendFormat:@"%02X", data[i]];
     }
+    
+return hex;
 }
+@end

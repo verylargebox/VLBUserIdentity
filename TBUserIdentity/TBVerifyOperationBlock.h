@@ -1,8 +1,8 @@
 //
-//  main.m
+//  TBVerifyOperationBlock.h
 //  TBUserIdentity
 //
-//  Created by Markos Charatzas on 02/03/2013.
+//  Created by Markos Charatzas on 10/02/2013.
 //  Copyright (c) 2013 Markos Charatzas (@qnoid). 
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -24,13 +24,25 @@
 //  SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "TBVerifyUserOperationDelegate.h"
 
-#import "TBAppDelegate.h"
+typedef void(^TBDidSucceedWithVerificationForEmail)(NSString* email, NSDictionary* residence);
+typedef void(^TBDidFailOnVerifyWithError)(NSError* error);
 
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TBAppDelegate class]));
-    }
+NS_INLINE
+TBDidSucceedWithVerificationForEmail tbEmptyDidSucceedWithVerificationForEmail(){
+return ^(NSString* email, NSDictionary* residence){};
 }
+
+NS_INLINE
+TBDidFailOnVerifyWithError tbEmptyDidFailOnVerifyWithError(){
+return ^(NSError* error){};
+}
+
+@interface TBVerifyOperationBlock : NSObject <TBVerifyUserOperationDelegate>
+
+@property (nonatomic, copy) TBDidSucceedWithVerificationForEmail didSucceedWithVerificationForEmail;
+@property (nonatomic, copy) TBDidFailOnVerifyWithError didFailOnVerifyWithError;
+
+@end

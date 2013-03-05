@@ -1,9 +1,9 @@
 //
-//  main.m
+//  TBEmailViewController.h
 //  TBUserIdentity
 //
-//  Created by Markos Charatzas on 02/03/2013.
-//  Copyright (c) 2013 Markos Charatzas (@qnoid). 
+//  Created by Markos Charatzas on 19/11/2012.
+//  Copyright (c) 2012 Markos Charatzas (@qnoid). 
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of
 //  this software and associated documentation files (the "Software"), to deal in
@@ -25,12 +25,35 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TBCreateUserOperationDelegate.h"
 
-#import "TBAppDelegate.h"
+@class TBButton;
 
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TBAppDelegate class]));
-    }
-}
+/**
+
+*/
+@protocol TBEmailViewControllerDelegate <NSObject>
+
+/**
+ Callback
+ 
+ @param email the email as entered by the user
+ @param residence
+*/
+-(void)didEnterEmail:(NSString*)email forResidence:(NSString*)residence;
+
+@end
+/**
+  Asks the user for her email and makes a new registration with server.
+ 
+*/
+@interface TBEmailViewController : UIViewController <UITextFieldDelegate>
+
+@property (nonatomic, weak) IBOutlet UITextField *emailTextField;
+@property (nonatomic, weak) IBOutlet UIButton *registerButton;
+@property (nonatomic, weak) id<TBCreateUserOperationDelegate> createUserOperationDelegate;
+@property (nonatomic, weak) id<TBEmailViewControllerDelegate> delegate;
+
++(TBEmailViewController*)newEmailViewController;
+-(IBAction)didTouchUpInsideRegister:(id)sender;
+@end

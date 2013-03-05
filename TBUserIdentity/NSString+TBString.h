@@ -1,9 +1,9 @@
 //
-//  main.m
+//  NSString+TBString.h
 //  TBUserIdentity
 //
-//  Created by Markos Charatzas on 02/03/2013.
-//  Copyright (c) 2013 Markos Charatzas (@qnoid). 
+//  Created by Markos Charatzas on 21/11/2012.
+//  Copyright (c) 2012 Markos Charatzas (@qnoid). 
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of
 //  this software and associated documentation files (the "Software"), to deal in
@@ -24,13 +24,21 @@
 //  SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-#import "TBAppDelegate.h"
+/**
+ Category on NSString
+*/
+@interface NSString (TBString)
 
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TBAppDelegate class]));
-    }
-}
+/**
+ Creates a new hex NSString that represents the given data.
+ Each character in data is created in the equivelent hex.
+ 
+ @param data the char array to convert to an hex NSString
+ @param length the length of the data array
+ @return a hex NSString that has double the length of the given data
+*/
++(NSString*)stringHexFromData:(uint8_t[])data size:(NSUInteger)length;
+
+@end

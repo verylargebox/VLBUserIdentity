@@ -1,9 +1,11 @@
 //
-//  main.m
-//  TBUserIdentity
+//  Copyright 2010 TheBox
+//  
 //
-//  Created by Markos Charatzas on 02/03/2013.
-//  Copyright (c) 2013 Markos Charatzas (@qnoid). 
+//  This file is part of TheBox
+//
+//  Created by Markos Charatzas (@qnoid) on 20/03/2011.
+//  Contributor(s): .-
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of
 //  this software and associated documentation files (the "Software"), to deal in
@@ -24,13 +26,32 @@
 //  SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+@class AFHTTPRequestOperation;
+@protocol TBCreateUserOperationDelegate;
+@protocol TBVerifyUserOperationDelegate;
 
-#import "TBAppDelegate.h"
+/**
+  Provides all available queries to the API
+*/
+@interface TBQueries : NSObject 
 
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TBAppDelegate class]));
-    }
-}
+extern NSString* const TB_SERVICE;
+
+/**
+ 
+ @param delegate
+ @param email
+ @param residence
+*/
++(AFHTTPRequestOperation*)newCreateUserQuery:(NSObject<TBCreateUserOperationDelegate>*)delegate email:(NSString*)email residence:(NSString*)residence;
+
+/**
+ Verifies the given email and residence with the server.
+ 
+ @param delegate @retained the delegate to callback
+ @param email the email to register the user as
+ @param residence the residence associated with the user
+*/
++(AFHTTPRequestOperation*)newVerifyUserQuery:(NSObject<TBVerifyUserOperationDelegate>*)delegate email:(NSString*)email residence:(NSString*)residence;
+@end

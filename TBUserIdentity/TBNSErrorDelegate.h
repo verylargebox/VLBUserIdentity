@@ -1,9 +1,9 @@
 //
-//  main.m
+//  TBNSErrorDelegate.h
 //  TBUserIdentity
 //
-//  Created by Markos Charatzas on 02/03/2013.
-//  Copyright (c) 2013 Markos Charatzas (@qnoid). 
+//  Created by Markos Charatzas on 08/12/2012.
+//  Copyright (c) 2012 Markos Charatzas (@qnoid). 
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of
 //  this software and associated documentation files (the "Software"), to deal in
@@ -23,14 +23,18 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 //
+#import <Foundation/Foundation.h>
 
-#import <UIKit/UIKit.h>
+@protocol TBNSErrorDelegate <NSObject>
 
-#import "TBAppDelegate.h"
+/**
+ Callback by TBQueries when a AFHTTPRequestOperation cannot connect to host.
+ 
+ {code}
+ error.code == NSURLErrorCannotConnectToHost
+ {code}
 
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TBAppDelegate class]));
-    }
-}
+ @param error the error as passed on AFHTTPRequestOperation#setCompletionBlockWithSuccess:failure:
+*/
+-(void)didFailWithCannonConnectToHost:(NSError*)error;
+@end

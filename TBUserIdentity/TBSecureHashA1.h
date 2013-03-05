@@ -1,9 +1,9 @@
 //
-//  main.m
+//  TBSecureHashA1.h
 //  TBUserIdentity
 //
-//  Created by Markos Charatzas on 02/03/2013.
-//  Copyright (c) 2013 Markos Charatzas (@qnoid). 
+//  Created by Markos Charatzas on 21/11/2012.
+//  Copyright (c) 2012 Markos Charatzas (@qnoid). 
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of
 //  this software and associated documentation files (the "Software"), to deal in
@@ -24,13 +24,27 @@
 //  SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-#import "TBAppDelegate.h"
+/**
+  An implementation of the SHA-1 cryptographic hash function.
+*/
+@interface TBSecureHashA1 : NSObject
 
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TBAppDelegate class]));
-    }
-}
+/**
+ Generates a UUID SHA-1 hash based.
+ 
+ @return a new hex encoded NSString of 40 bytes.
+ @see CC_SHA1
+*/
+-(NSString*)newKey;
+
+
+/**
+ Encrypts the given digest using the SHA-1 algorithm.
+ 
+ @param digest the key to
+ @return a new hex encoded NSString of 40 bytes.
+*/
+-(NSString*)newKey:(NSString*)digest;
+@end
