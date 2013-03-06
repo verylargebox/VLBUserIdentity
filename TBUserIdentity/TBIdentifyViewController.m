@@ -199,14 +199,6 @@ return YES;
     verifyOperationBlock.didFailOnVerifyWithError = ^(NSError* error)
     {
         tbBmailStatus(TBEmailStatusError)(tableViewCell);
-
-        if(NSURLErrorNotConnectedToInternet == error.code){
-            UIAlertView* notConnectedToInternetAlertView = [[UIAlertView alloc] initWithTitle:@"Not Connected to Internet" message:@"You are not connected to the internet. Check your connection and try again." delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
-            
-            [notConnectedToInternetAlertView show];            
-        return;
-        }
-
         [wself didFailOnVerifyWithError:error];
     };
     

@@ -26,7 +26,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol TBVerifyUserOperationDelegate <NSObject>
+@protocol TBVerifyUserOperationDelegate <NSObject, TBNSErrorDelegate>
 
 /**
  Callback TBQueries#newVerifyUserQuery:email:residence succesfully verifies the user for the given email under

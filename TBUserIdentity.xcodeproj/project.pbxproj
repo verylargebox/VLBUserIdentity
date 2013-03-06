@@ -20,6 +20,10 @@
 		BDA9FC9016E52A5A00A30782 /* AFNetworking.podspec in Resources */ = {isa = PBXBuildFile; fileRef = BDA9FC7A16E52A5900A30782 /* AFNetworking.podspec */; };
 		BDA9FC9316E52A5A00A30782 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA9FC7F16E52A5900A30782 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BDA9FC9716E52A5A00A30782 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA9FC8516E52A5A00A30782 /* SSKeychain.m */; };
+		BDA9FC9A16E7986E00A30782 /* TBView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA9FC9916E7986D00A30782 /* TBView.m */; };
+		BDA9FC9C16E7987C00A30782 /* TBView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDA9FC9B16E7987C00A30782 /* TBView.xib */; };
+		BDA9FCA016E7999700A30782 /* TBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA9FC9E16E7999700A30782 /* TBViewController.m */; };
+		BDA9FCA116E7999700A30782 /* TBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDA9FC9F16E7999700A30782 /* TBViewController.xib */; };
 		BDB72D3216E22D39006B0142 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDB72D3116E22D39006B0142 /* UIKit.framework */; };
 		BDB72D3416E22D39006B0142 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDB72D3316E22D39006B0142 /* Foundation.framework */; };
 		BDB72D3616E22D39006B0142 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDB72D3516E22D39006B0142 /* CoreGraphics.framework */; };
@@ -91,6 +95,12 @@
 		BDA9FC8316E52A5A00A30782 /* Readme.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.markdown; sourceTree = "<group>"; };
 		BDA9FC8416E52A5A00A30782 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
 		BDA9FC8516E52A5A00A30782 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
+		BDA9FC9816E7986D00A30782 /* TBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBView.h; sourceTree = "<group>"; };
+		BDA9FC9916E7986D00A30782 /* TBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBView.m; sourceTree = "<group>"; };
+		BDA9FC9B16E7987C00A30782 /* TBView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBView.xib; sourceTree = "<group>"; };
+		BDA9FC9D16E7999600A30782 /* TBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBViewController.h; sourceTree = "<group>"; };
+		BDA9FC9E16E7999700A30782 /* TBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBViewController.m; sourceTree = "<group>"; };
+		BDA9FC9F16E7999700A30782 /* TBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBViewController.xib; sourceTree = "<group>"; };
 		BDB72D2E16E22D39006B0142 /* TBUserIdentity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBUserIdentity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB72D3116E22D39006B0142 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BDB72D3316E22D39006B0142 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -225,6 +235,12 @@
 		BDB72D2516E22D39006B0142 = {
 			isa = PBXGroup;
 			children = (
+				BDA9FC9D16E7999600A30782 /* TBViewController.h */,
+				BDA9FC9E16E7999700A30782 /* TBViewController.m */,
+				BDA9FC9F16E7999700A30782 /* TBViewController.xib */,
+				BDA9FC9B16E7987C00A30782 /* TBView.xib */,
+				BDA9FC9816E7986D00A30782 /* TBView.h */,
+				BDA9FC9916E7986D00A30782 /* TBView.m */,
 				BDB72D3716E22D39006B0142 /* TBUserIdentity */,
 				BDB72D5B16E22D3A006B0142 /* TBUserIdentityTests */,
 				BDB72D3016E22D39006B0142 /* Frameworks */,
@@ -403,6 +419,8 @@
 				BDB72DC716E2C760006B0142 /* TBVerifiedViewController.xib in Resources */,
 				BDB72DCB16E2C97F006B0142 /* TBEmailViewController.xib in Resources */,
 				BDA9FC9016E52A5A00A30782 /* AFNetworking.podspec in Resources */,
+				BDA9FC9C16E7987C00A30782 /* TBView.xib in Resources */,
+				BDA9FCA116E7999700A30782 /* TBViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +478,8 @@
 				BDA9FC8F16E52A5A00A30782 /* UIImageView+AFNetworking.m in Sources */,
 				BDA9FC9316E52A5A00A30782 /* JSONKit.m in Sources */,
 				BDA9FC9716E52A5A00A30782 /* SSKeychain.m in Sources */,
+				BDA9FC9A16E7986E00A30782 /* TBView.m in Sources */,
+				BDA9FCA016E7999700A30782 /* TBViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

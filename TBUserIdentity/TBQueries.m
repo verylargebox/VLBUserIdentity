@@ -101,8 +101,17 @@ return request;
    {
        [delegate didSucceedWithVerificationForEmail:email residence:[[operation.responseString objectFromJSONString] objectForKey:@"residence"]];
    }
-   failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-       NSLog(@"ERROR: %s %@", __PRETTY_FUNCTION__, error);
+   failure:^(AFHTTPRequestOperation *operation, NSError *error)
+    {
+       TBAFHTTPRequestOperationFailureBlockOnErrorCode *cannotConnectToHost =
+            [TBAFHTTPRequestOperationFailureBlockOnErrorCode cannotConnectToHost:^(AFHTTPRequestOperation *operation){
+                [delegate didFailWithCannonConnectToHost:error];
+            }];
+       
+       if([cannotConnectToHost failure:operation error:error]){
+           return;
+       }
+
        [delegate didFailOnVerifyWithError:error];
    }];
     
