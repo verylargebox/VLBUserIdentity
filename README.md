@@ -7,8 +7,8 @@ A related [public talk][2] was given at [NSConference][3] by [qnoid][18] in Leic
 **The plethora of passwords** across apps, services and devices and the overhead their usage adds.
 
 #Motivation
-To provide a simple way for users to login.
-To provide a simple way for developers to implement user authentication.
+1. To provide a simple way for users to login.
+2. To provide a simple way for developers to implement user authentication.
 
 #Implementation
 Upon registering, the user client - in this case the iPhone - is assigned a residence. 
