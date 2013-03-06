@@ -1,6 +1,6 @@
 #Introduction
 This is an implementation of a residence based authentication on iOS for the iPhone.
-Residence based authentication is an alternative user authentication, predominantly done by a password.
+Residence based authentication is an alternative to password based authentication.
 A related [public talk][2] was given at [NSConference][3] by [qnoid][18] in Leicester on Wednesday, 06 March 2013.
 
 #Problem
@@ -8,14 +8,14 @@ A related [public talk][2] was given at [NSConference][3] by [qnoid][18] in Leic
 
 #Motivation
 1. To provide a simple way for users to login.
-2. To provide a simple way for developers to implement user authentication.
+2. To provide a simple way for developers to implement user authentication without relying to third party services (e.g. openid, oauth)
 
 #Implementation
 Upon registering, the user client - in this case the iPhone - is assigned a residence. 
 Once the residence is authorised, the user can use that residence to login.
 The residence has no expiry date but can be deleted by the user on demand to prevent further access from that client.
 
-The server implementation is deployed on heroku and uses email authorisation for the residence. The source code is available [on github.][4]
+An example server implementation is deployed on heroku which uses email verification for the residence. The source code is available [on github.][4] The email merely allows the user to verify a residence. 
 A [high level overview of the client/server implementation][1]) is also available.
 
 #Other work on user authentication
@@ -24,11 +24,11 @@ Haven't come across any written public posts by Marco with details on the implem
 It appears that no token (e.g. a password or a residence) is used for user authorisation. The user is asked for his email and a [link is sent, with an expiry date][9].
 The link is effectively an authorised login that sets a cookie for the client.
 
-Ben Brown, [@xoxco][16] tweeted ["(we) implement passwordless login in all new software as a rule"][7] and also written a post on [passwordless login][8] and an [aftermath][10] since his [hacker news post][11].
+Ben Brown, [@xoxco][16] tweeted ["(we) implement passwordless login in all new software as a rule"][7] and also written a post on [passwordless login][8] and an [aftermath][10] on his [hacker news post][11].
 
-Wired recently (November 2012) wrote an article on [passwords and identity theft.][12]
+[Wired (November 2012)][12] wrote an article on passwords and identity theft.
 
-Arstechnica in 2009 wrote ["30 years of failure: the username/password combination".][13]
+[Arstechnica ( 2009)][13] wrote "30 years of failure: the username/password combination".
 
 #Considerations
 1. There is a chance that the user loses access to both his email and any client with an authorised residence. How does the user regain access to her data?
