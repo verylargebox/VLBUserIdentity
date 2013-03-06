@@ -1,7 +1,7 @@
 #Introduction
 This is an implementation of a residence based authentication on iOS for the iPhone.
 Residence based authentication is an alternative user authentication, predominantly done by a password.
-A related [public talk][2] was given at [NSConference][3] by qnoid in Leicester on Wednesday, 06 March 2013.
+A related [public talk][2] was given at [NSConference][3] by [qnoid][18] in Leicester on Wednesday, 06 March 2013.
 
 #Problem
 **The plethora of passwords** across apps, services and devices and the overhead their usage adds.
@@ -53,3 +53,4 @@ There is a [Google+ topic already on the subject][14], so please focus your effo
 [14]: https://plus.google.com/116431322187209993066/posts/XWbTmuxr921
 [15]: https://twitter.com/marcoarment
 [16]: https://twitter.com/xoxco
+[18]: http://www.qnoid.com
