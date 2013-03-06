@@ -38,7 +38,7 @@ Arstechnica in 2009 wrote ["30 years of failure: the username/password combinati
 There is a [Google+ topic already on the subject][14], so please focus your efforts there.
 
 [1]: https://speakerdeck.com/qnoid/user-identity
-[2]: https://speakerdeck.com/qnoid/user-identity-nsconf
+[2]: https://speakerdeck.com/qnoid/user-identity-nsconference-2013
 [3]: http://nsconference.com
 [4]: https://github.com/qnoid/user_identity
 [5]: http://www.marco.org/2013/02/24/the-magazine-sharing
