@@ -31,8 +31,8 @@ Wired recently (November 2012) wrote an article on [passwords and identity theft
 Arstechnica in 2009 wrote ["30 years of failure: the username/password combination".][13]
 
 #Considerations
-There is a chance that the user loses access to both his email and any client with an authorised residence. How does the user regain access to her data?
-Email is not really designed for user authentication. Might worth considering a protocol for user authentication.
+1. There is a chance that the user loses access to both his email and any client with an authorised residence. How does the user regain access to her data?
+2. Email is not really designed for user authentication. Might worth considering a protocol for user authentication.
 
 #Discussion
 There is a [Google+ topic already on the subject][14], so please focus your efforts there.
