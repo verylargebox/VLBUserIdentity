@@ -4,7 +4,7 @@ Residence based authentication is an alternative user authentication, predominan
 A related [public talk][2] was given at [NSConference][3] by qnoid in Leicester on Wednesday, 06 March 2013.
 
 #Problem
-*Thed plethora of passwords* across apps, services and devices and the overhead their usage adds.
+*The plethora of passwords* across apps, services and devices and the overhead their usage adds.
 
 #Motivation
 To provide a simple way for users to login.
@@ -19,12 +19,12 @@ The server implementation is deployed on heroku and uses email authorisation for
 A [high level overview of the client/server implementation][1]) is also available.
 
 #Other work on user authentication
-Marco Arment, @marcoarment has ["implemented a crazy passwordless login system"][5] for [The Magazine][6] on the web.
+Marco Arment, [@marcoarment][15] has ["implemented a crazy passwordless login system"][5] for [The Magazine][6] on the web.
 Haven't come across any written public posts by Marco with details on the implementation. 
 It appears that no token (e.g. a password or a residence) is used for user authorisation. The user is asked for his email and a [link is sent, with an expiry date][9].
 The link is effectively an authorised login that sets a cookie for the client.
 
-Ben Brown, @xoxco tweeted ["(we) implement passwordless login in all new software as a rule"][7] and also written a post on [passwordless login][8] and an [aftermath][10] since his [hacker news post][11].
+Ben Brown, [@xoxco][16] tweeted ["(we) implement passwordless login in all new software as a rule"][7] and also written a post on [passwordless login][8] and an [aftermath][10] since his [hacker news post][11].
 
 Wired recently (November 2012) wrote an article on [passwords and identity theft.][12]
 
@@ -51,3 +51,5 @@ There is a [Google+ topic already on the subject][14], so please focus your effo
 [12]: http://www.wired.com/gadgetlab/2012/11/ff-mat-honan-password-hacker/all/
 [13]: http://arstechnica.com/business/2009/10/30-years-of-failure-the-user-namepassword-combination/
 [14]: https://plus.google.com/116431322187209993066/posts/XWbTmuxr921
+[15]: https://twitter.com/marcoarment
+[16]: https://twitter.com/xoxco
