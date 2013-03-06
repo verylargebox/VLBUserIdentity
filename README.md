@@ -4,7 +4,7 @@ Residence based authentication is an alternative user authentication, predominan
 A related [public talk][2] was given at [NSConference][3] by qnoid in Leicester on Wednesday, 06 March 2013.
 
 #Problem
-*The plethora of passwords* across apps, services and devices and the overhead their usage adds.
+**The plethora of passwords** across apps, services and devices and the overhead their usage adds.
 
 #Motivation
 To provide a simple way for users to login.
