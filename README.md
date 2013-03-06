@@ -8,7 +8,7 @@ A related [public talk][2] was given at [NSConference][3] by [qnoid][18] in Leic
 
 #Motivation
 To provide a simple way for users to login.
-To provide a simple way for developers to implement.
+To provide a simple way for developers to implement user authentication.
 
 #Implementation
 Upon registering, the user client - in this case the iPhone - is assigned a residence. 
