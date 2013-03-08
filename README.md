@@ -11,7 +11,7 @@ A related [public talk][2] was given at [NSConference][3] by [qnoid][18] in Leic
 2. To provide a simple way for developers to implement user authentication without relying to third party services (e.g. openid, oauth)
 
 #Implementation
-Upon registering, the user client - in this case the iPhone - is assigned a residence. 
+Upon registering, the user's client - in this case the iPhone - is assigned a residence. 
 Once the residence is authorised, the user can use that residence to login.
 The residence has no expiry date but can be deleted by the user on demand to prevent further access from that client.
 
