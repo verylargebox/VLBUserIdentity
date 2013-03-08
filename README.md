@@ -32,7 +32,7 @@ Ben Brown, [@xoxco][16] tweeted ["(we) implement passwordless login in all new s
 
 #Considerations
 1. There is a chance that the user loses access to both his email and any client with an authorised residence. How does the user regain access to her data?
-2. Email is not really designed for user authentication. Might worth considering a protocol for user authentication.
+2. Email is not really designed for user verification. Might worth considering a protocol for user verification.
 
 #Discussion
 There is a [Google+ topic already on the subject][14], so please focus your efforts there.
