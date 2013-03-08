@@ -2,7 +2,7 @@
 This is an implementation of a residence based authentication on iOS for the iPhone.
 Residence based authentication is an alternative to password based authentication.
 A related [public talk][2] was given at [NSConference][3] by [qnoid][18] in Leicester on Wednesday, 06 March 2013.
-A video of the above implementation also available at http://www.youtube.com/watch?v=_9Zu-AHhXyo.
+A video of the above implementation [also available][17].
 
 #Problem
 **The plethora of passwords** across apps, services and devices and the overhead their usage adds.
@@ -54,4 +54,5 @@ There is a [Google+ topic already on the subject][14], so please focus your effo
 [14]: https://plus.google.com/116431322187209993066/posts/XWbTmuxr921
 [15]: https://twitter.com/marcoarment
 [16]: https://twitter.com/xoxco
+[17]: http://www.youtube.com/watch?v=_9Zu-AHhXyo
 [18]: http://www.qnoid.com
