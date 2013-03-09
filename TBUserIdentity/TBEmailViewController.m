@@ -70,28 +70,6 @@
 return YES;
 }
 
-#pragma mark TBRegistrationOperationDelegate
--(void)didSucceedWithRegistrationForEmail:(NSString *)email residence:(NSString *)residence
-{
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-    NSError *error = nil;
-    [SSKeychain setPassword:residence forService:TB_SERVICE account:email error:&error];
-    
-    if (error) {
-        NSLog(@"WARNING: %s %@", __PRETTY_FUNCTION__, error);
-    }
-    
-    UIAlertView* userUnauthorisedAlertView = [[UIAlertView alloc] initWithTitle:@"New Registration" message:[NSString stringWithFormat:@"Please check your email %@.", email] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
-    
-    [userUnauthorisedAlertView show];
-
-}
-
--(void)didFailOnRegistrationWithError:(NSError*)error
-{
-    NSLog(@"WARNING: %s %@", __PRETTY_FUNCTION__, error);
-}
-
 -(IBAction)didTouchUpInsideRegister:(id)sender
 {
     TBSecureHashA1 *sha1 = [TBSecureHashA1 new];

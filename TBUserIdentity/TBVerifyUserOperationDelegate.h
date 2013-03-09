@@ -25,6 +25,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TBNSErrorDelegate.h"
 
 @protocol TBVerifyUserOperationDelegate <NSObject, TBNSErrorDelegate>
 
