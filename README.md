@@ -4,7 +4,10 @@ Residence based authentication is an alternative to password based authenticatio
 A related [public talk][2] was given at [NSConference][3] by [qnoid][18] in Leicester on Wednesday, 06 March 2013.  
 
 A video of the above implementation [also available][17].  
-An iOS library has been created by [Tom Adriaenssen][20], called [IIResidenceStore][19].
+[Tom Adriaenssen][20] has created:  
+An iOS library , called [IIResidenceStore][19].
+A javascript client, called [ResidenceStoreClient.js][22].
+A .NET server, called [NResidenceStore][21].
 
 #Problem
 **The plethora of passwords** across apps, services and devices and the overhead their usage adds.
@@ -60,3 +63,5 @@ There is a [Google+ topic already on the subject][14], so please focus your effo
 [18]: http://www.qnoid.com
 [19]: https://github.com/Inferis/IIResidenceStore
 [20]: https://github.com/Inferis
+[21]: https://github.com/Inferis/NResidenceStore
+[22]: https://github.com/Inferis/ResidenceStoreClient.js
