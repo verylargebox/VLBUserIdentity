@@ -5,9 +5,9 @@ A related [public talk][2] was given at [NSConference][3] by [qnoid][18] in Leic
 
 A video of the above implementation [also available][17].  
 [Tom Adriaenssen][20] has created:  
-An iOS library , called [IIResidenceStore][19].
-A javascript client, called [ResidenceStoreClient.js][22].
-A .NET server, called [NResidenceStore][21].
+An iOS library , called [IIResidenceStore][19].    
+A javascript client, called [ResidenceStoreClient.js][22].    
+A .NET server, called [NResidenceStore][21].    
 
 #Problem
 **The plethora of passwords** across apps, services and devices and the overhead their usage adds.
