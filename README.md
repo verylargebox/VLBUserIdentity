@@ -10,7 +10,8 @@ A javascript client, called [ResidenceStoreClient.js][22].
 A .NET server, called [NResidenceStore][21].    
 
 #Problem
-**The plethora of passwords** across apps, services and devices and the overhead their usage adds.
+<blockquote class="twitter-tweet" lang="en"><p>By using a password, you actually give up security control and risk your users&#39; data. Stop asking for one now. <a href="http://t.co/JUuLMcENBu">http://t.co/JUuLMcENBu</a></p>&mdash; Markos Charatzas (@qnoid) <a href="https://twitter.com/qnoid/statuses/437322924736131072">February 22, 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 #Motivation
 1. To provide a simple way for users to login.
