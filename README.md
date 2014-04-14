@@ -14,8 +14,9 @@ A .NET server, called [NResidenceStore][21].
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 #Motivation
-1. To provide a simple way for users to login.
-2. To provide a simple way for developers to implement user authentication without relying to third party services (e.g. openid, oauth)
+1. To provide a secure alternative to the password given existing user behavior (i.e. not logging out) and practices (i.e. forgot password link via email, long lived sessions)
+2. To provide a simple way for users to login.
+3. To provide a simple way for developers to implement user authentication without relying to third party services (e.g. openid, oauth)
 
 #Implementation
 Upon registering, the user's client - in this case the iPhone - is assigned a residence. 
