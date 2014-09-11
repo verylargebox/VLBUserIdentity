@@ -1,3 +1,5 @@
+<iframe src="//player.vimeo.com/video/90418972?color=aaafb3" width="500" height="279" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/90418972">User Identity - Markos Charatzas</a> from <a href="http://vimeo.com/nsconf">NSConference</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
 #Introduction
 This is an example application using residence based authentication on iOS for the iPhone.
 Residence based authentication is an alternative to password based authentication.
