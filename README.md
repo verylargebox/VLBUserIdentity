@@ -12,8 +12,7 @@ A javascript client, called [ResidenceStoreClient.js][22].
 A .NET server, called [NResidenceStore][21].    
 
 #Problem
-<blockquote class="twitter-tweet" lang="en"><p>By using a password, you actually give up security control and risk your users&#39; data. Stop asking for one now. <a href="http://qnoid.com/2014/02/22/Why-arent-we-password-free-yet%3F.html">http://qnoid.com/2014/02/22/Why-arent-we-password-free-yet%3F.html</a></p>&mdash; Markos Charatzas (@qnoid) <a href="https://twitter.com/qnoid/statuses/437322924736131072">February 22, 2014</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">By using a password, you actually give up security control and risk your users&#39; data. Stop asking for one now. <a href="http://t.co/JUuLMcENBu">http://t.co/JUuLMcENBu</a></p>&mdash; Markos Charatzas (@qnoid) <a href="https://twitter.com/qnoid/status/437322924736131072">February 22, 2014</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 #Motivation
 1. To provide a secure alternative to the password given existing user behavior (i.e. not logging out) and practices (i.e. forgot password link via email, long lived sessions)
