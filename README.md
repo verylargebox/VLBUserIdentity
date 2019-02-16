@@ -1,6 +1,8 @@
 # Notice
 Archived - Hasn't been maintained in 6 years
 
+* * * 
+
 #Introduction
 This is an example application using residence based authentication on iOS for the iPhone.
 Residence based authentication is an alternative to password based authentication.
